@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Main.css'
 import { assets } from '../../assets/assets'
+import useGemini from '../../api/useGemini'
 
 const main = () => {
+  const {isGeminiLoading, getResponse} = useGemini()
+
+  const [value, setValue] = useState("")
   return (
 
     <div className="main">
@@ -36,12 +40,22 @@ const main = () => {
 
         <div className="main-bottom">
           <div className="search-box">
-            <input type="text" placeholder='Enter a promt here' />
+            <input type="text" value={value} onChange={(e) => {
+              setValue(e.target.value)
+            }} placeholder='Enter a promt here' />
 
             <div>
               <img src={assets.gallery_icon} alt="" />
               <img src={assets.mic_icon} alt="" />
-              <img src={assets.send_icon} alt="" />
+              <img onClick={() => {
+                if (value) {
+                  const text = value.trim();
+                  getResponse(value, (response, error) => {
+                    console.log(response)
+                  })
+                  setValue("")
+                }
+              }} src={assets.send_icon} alt="" />
             </div>
           </div>
           <p className="bottom-info">
