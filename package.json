@@ -12,8 +12,10 @@
   "dependencies": {
     "@google/generative-ai": "^0.17.0",
     "axios": "^1.7.4",
+    "html-react-parser": "^5.1.12",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "showdown": "^2.1.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",

@@ -1,0 +1,51 @@
+.main-12 {
+    display: flex;
+    align-items: center;
+    width: 100%;   
+}
+
+.result{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+}
+
+.result img{
+    width: 20px;
+    border-radius: 50%;
+}
+
+.main-13 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: #f0f4f9;
+    color: #1e1e1e;
+    padding: 20px;
+    border-radius: 1rem;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.main-12end {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: end;
+    
+}
+
+.gemini-result{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: start;
+    line-height: 160%;
+}
+
+.gemini-result img{
+    width: 20px;
+    border-radius: 50%;
+
+}
